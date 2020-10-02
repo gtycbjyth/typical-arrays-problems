@@ -36,5 +36,16 @@ if (array.length === 0){
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if (!array) {
+        return 0;        
+    }
+    if (array.length === 0) {
+        return 0;
+    }
+  let sum;
+  sum = 0;
+  array.forEach(element =>{
+      sum += element;
+  })
+    return sum / (array.length);
 }
