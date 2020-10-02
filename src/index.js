@@ -18,13 +18,19 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-let = max;
+let max;
 if (!array){
     return 0;
 }
 if (array.length === 0){
     return 0;
 }
+    max = array[0];
+        array.forEach(element => {
+            if (max < element) {
+                max = element;
+            }
+    });
 
   return max;
 }
